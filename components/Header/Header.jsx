@@ -5,7 +5,7 @@ import { collapseItems, socialLinks } from './data'
 
 export const Header = () => {
 	return (
-    <Navbar variant='sticky'>
+    <Navbar variant='sticky' maxWidth='fluid'>
       <Navbar.Toggle showIn='xs' />
       <Navbar.Brand>
         <a href='/' style={{ color: '#8f754f', padding: '15px' }}>
