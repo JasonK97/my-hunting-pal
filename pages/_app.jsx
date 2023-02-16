@@ -1,5 +1,43 @@
-import '@/styles/globals.css'
+import { Header } from '../components'
+import { useRouter } from 'next/router'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { createTheme, NextUIProvider } from '@nextui-org/react'
+
+function MyApp({ Component, pageProps }) {
+  const path = useRouter().asPath
+
+  const lightTheme = createTheme({
+    type: 'light',
+    // theme: {
+    //   colors: {...}, // optional
+    // }
+  })
+  
+  const darkTheme = createTheme({
+    type: 'dark',
+    theme: {
+      colors: {
+        background: '#262626'
+      },
+    }
+  })
+
+  return (
+    <NextThemesProvider
+      defaultTheme="dark"
+      attribute="class"
+      value={{
+        // light: lightTheme.className,
+        dark: darkTheme.className
+      }}
+    >
+      <NextUIProvider>
+        <Header path={path} />
+        <Component {...pageProps} />
+      </NextUIProvider>
+    </NextThemesProvider>
+  )
 }
+
+export default MyApp
