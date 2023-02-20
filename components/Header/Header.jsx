@@ -14,6 +14,7 @@ export const Header = () => {
             alt='My Hunting Pal logo antlers'
             width={100}
             height={100}
+            priority
           />
         </a>
         <Text b color="#64b6ac">
