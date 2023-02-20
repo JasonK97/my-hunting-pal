@@ -1,9 +1,18 @@
 import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
+import { 
+  BannerButton,
+  HeroContent,
+  HeroWrapper,
+  ImageWrapper,
+  HeroText,
+  SubText,
+} from '../styles/styles'
 
 import { SEO } from '../components'
 
 export default function Home() {
+  const background = '/static/unsplash/byron-johnson-lQ0gPL_0Bt8-unsplash.jpg'
+
   return (
     <>
       <SEO
@@ -11,14 +20,26 @@ export default function Home() {
         description='My Hunting Pal, your new companion for hunting trips.'
       />
 
-      <main className={styles.main}>
-        {/* <Image 
-          src='/static/unsplash/byron-johnson-lQ0gPL_0Bt8-unsplash.jpg'
-          alt='elk bleeting'
-          width={'100%'}
-          height={'100%'}
-        /> */}
-      </main>
+      <HeroWrapper>
+        <ImageWrapper>
+          <Image 
+            src={background}
+            alt='A herd of Elk.'
+            layout='fill'
+            objectFit='cover'
+            objectPosition='center'
+            priority
+          />
+        </ImageWrapper>
+
+        <HeroContent>
+          <HeroText>
+            Welcome to My Hunting Pal.
+          </HeroText>
+          <SubText>Your best friend for your next trip.</SubText>
+          <BannerButton href='/maps'>Start Exploring</BannerButton>
+        </HeroContent>
+      </HeroWrapper>
     </>
   )
 }
