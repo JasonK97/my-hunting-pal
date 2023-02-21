@@ -7,7 +7,7 @@ export default function Maps() {
     <>
       <SEO 
         page='Maps'
-        description='Take a look, map out and plan your hunting trip.'
+        description='Take a look, map out, and plan your next hunting trip.'
       />
     </>
   )
