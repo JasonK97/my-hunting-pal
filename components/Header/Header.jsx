@@ -2,13 +2,18 @@ import React from 'react'
 import Image from 'next/image'
 import { Navbar, Text, Link } from '@nextui-org/react'
 import { collapseItems, socialLinks } from './data'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 export const Header = () => {
+  const { data: session } = useSession()
+
+  console.log(session)
+
 	return (
     <Navbar variant='sticky' maxWidth='fluid'>
       <Navbar.Toggle showIn='xs' />
       <Navbar.Brand>
-        <a href='/' style={{ color: '#8f754f', padding: '15px' }}>
+        <Link href='/' style={{ color: '#8f754f', padding: '15px' }}>
           <Image 
             src='/static/MHP_logo.png'
             alt='My Hunting Pal logo antlers'
@@ -16,7 +21,7 @@ export const Header = () => {
             height={100}
             priority
           />
-        </a>
+        </Link>
         <Text b color="#64b6ac">
           My Hunting Pal
         </Text>
@@ -26,13 +31,13 @@ export const Header = () => {
             <Link key={item.title} href={item.link} style={{ color: '#d7b377' }}>{item.title}</Link>
         ))}
       </Navbar.Content>
-      {/* <Navbar.Content>
-        {socialLinks.map(({ link, image, alt }) => (
-          <Link key={alt} href={link} target='_blank'>
-            <img src={image} alt={alt} width='20px' height='20px' />
-          </Link>
-        ))}
-      </Navbar.Content> */}
+      <Navbar.Content>
+        {!session ? (
+          <button onClick={() => signIn()}>Sign In</button>
+        ) : (
+          <button onClick={() => signOut()}>Sign out</button>
+        )}
+      </Navbar.Content>
       <Navbar.Collapse>
         {collapseItems.map((item, index) => (
           <Navbar.CollapseItem key={index}>
