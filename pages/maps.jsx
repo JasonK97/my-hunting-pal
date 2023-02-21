@@ -1,14 +1,13 @@
 import React from 'react'
-import { SEO } from '../components'
-import mapboxgl from 'mapbox-gl'
+
+import { SEO } from '@/components'
 
 export default function Maps() {
-
   return (
     <>
-      <SEO
+      <SEO 
         page='Maps'
-        description='Map out your next hunting trip.'
+        description='Take a look, map out and plan your hunting trip.'
       />
     </>
   )
