@@ -15,6 +15,7 @@ export const HeroContent = styled.div`
   align-items: left;
   padding-top: 15%;
   margin-left: 15%;
+  textGradient: 45deg, #545454 -20%, #ffffff 50%,
 `
 
 export const ImageWrapper = styled.div`
