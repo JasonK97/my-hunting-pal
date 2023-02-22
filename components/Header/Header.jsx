@@ -12,7 +12,18 @@ export const Header = () => {
 	return (
     <Navbar variant='sticky' maxWidth='fluid'>
       <Navbar.Toggle showIn='xs' />
-      <Navbar.Brand>
+      <Navbar.Brand showIn='xs'>
+        <Link href='/' style={{ color: '#8f754f', padding: '15px' }}>
+          <Image 
+            src='/static/MHP_logo.png'
+            alt='My Hunting Pal logo antlers'
+            width={75}
+            height={75}
+            priority
+          />
+        </Link>
+      </Navbar.Brand>
+      <Navbar.Brand hideIn='xs'>
         <Link href='/' style={{ color: '#8f754f', padding: '15px' }}>
           <Image 
             src='/static/MHP_logo.png'
