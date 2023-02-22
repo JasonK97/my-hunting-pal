@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
 import { createTheme, NextUIProvider } from '@nextui-org/react'
-import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from 'next-auth/react'
 
 function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
   const path = useRouter().asPath
