@@ -25,9 +25,8 @@ export default function Home() {
           <Image 
             src={background}
             alt='A herd of Elk.'
-            layout='fill'
-            objectFit='cover'
-            objectPosition='center'
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            fill
             priority
           />
         </ImageWrapper>
