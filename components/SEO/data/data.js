@@ -1,0 +1,1 @@
+export const siteTitle = 'My Hunting Pal'
