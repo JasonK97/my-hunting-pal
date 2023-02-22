@@ -33,9 +33,9 @@ export const Header = () => {
       </Navbar.Content>
       <Navbar.Content>
         {!session ? (
-          <button onClick={() => signIn()}>Sign In</button>
+          <Link style={{ color: '#64b6ac' }} onClick={() => signIn()}>Sign In</Link>
         ) : (
-          <button onClick={() => signOut()}>Sign out</button>
+          <Link style={{ color: '#64b6ac' }} onClick={() => signOut()}>Sign out</Link>
         )}
       </Navbar.Content>
       <Navbar.Collapse>
