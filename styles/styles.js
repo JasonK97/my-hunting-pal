@@ -75,6 +75,10 @@ export const ContentSection = styled.div`
   max-width: 800px;
 `
 
+export const ContentSubText = styled.span`
+  font-size: 20px;
+`
+
 export const HomeImageWrapper = styled.div`
   z-index: -1;
 

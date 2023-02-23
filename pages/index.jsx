@@ -12,6 +12,7 @@ import {
   HomeImageWrapper,
   HomeContent,
   ContentSection,
+  ContentSubText,
 } from '../styles/styles'
 
 import { SEO } from '../components'
@@ -81,11 +82,11 @@ export default function Home() {
               />
               Section off your favorite areas.
             </HeroText>
-            <SubText>
+            <ContentSubText>
               Our maps allow you to easily demarcate 
               the land you hunt and conveniently 
               identify your stands for future reference.
-            </SubText>
+            </ContentSubText>
           </ContentSection>
           
 
@@ -98,12 +99,12 @@ export default function Home() {
               />
               Easy Navigation.
             </HeroText>
-            <SubText>
+            <ContentSubText>
               With the assistance of our mapping technology, 
               you can conveniently navigate to your specific 
               stands and sectioned off land, no matter where 
               you find yourself.
-            </SubText>
+            </ContentSubText>
           </ContentSection>
         </HomeContent>
       </HomeContentWrapper>
