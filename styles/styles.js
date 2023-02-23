@@ -88,8 +88,8 @@ export const HomeImageWrapper = styled.div`
   @media(max-width: 800px) {
     img {
       width: 600px;
-      height: 600px;
-      right: -200px;
+      height: 500px;
+      right: -225px;
     }
   }
 `
