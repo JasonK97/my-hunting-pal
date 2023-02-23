@@ -15,9 +15,12 @@ import {
 } from '../styles/styles'
 
 import { SEO } from '../components'
+import useWindowDimensions from '../utils/useWindowDimensions'
 
 export default function Home() {
+  const { width } = useWindowDimensions()
   const background = '/static/unsplash/byron-johnson-lQ0gPL_0Bt8-unsplash.jpg'
+  const mobileBackground = '/static/unsplash/elk-herd-mobile.png'
   const contentBackground = '/static/animals/moose-brown.png'
 
   return (
@@ -29,13 +32,23 @@ export default function Home() {
 
       <HeroWrapper>
         <ImageWrapper>
-          <Image 
-            src={background}
-            alt='A herd of Elk.'
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-            fill
-            priority
-          />
+          {width < 800 ? (
+            <Image 
+              src={mobileBackground}
+              alt='A herd of Elk.'
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              fill
+              priority
+            />
+          ) : (
+            <Image 
+              src={background}
+              alt='A herd of Elk.'
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              fill
+              priority
+            />
+          )}
         </ImageWrapper>
 
         <HeroContent>
