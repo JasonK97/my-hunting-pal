@@ -19,6 +19,10 @@ export const HeroContent = styled.div`
   align-items: left;
   padding-top: 15%;
   margin-left: 15%;
+
+  @media(max-width: 800px) {
+    padding-top: 45%;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -145,6 +149,13 @@ export const HeaderLink = styled(Link)`
     transition: .25s;
   }
 `
+
+export const BottomImageWrapper = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+`
   
 export const Footer = styled.footer`
   display: flex;
@@ -152,6 +163,7 @@ export const Footer = styled.footer`
   padding: 2rem;
   border-top: 1px solid #eaeaea;
   align-items: center;
+  background-color: #171717;
 `
 
 export const FooterTextContainer = styled.div`

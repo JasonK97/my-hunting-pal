@@ -15,6 +15,7 @@ import {
   ContentSection,
   ContentText,
   ContentSubText,
+  BottomImageWrapper,
 } from '../styles/styles'
 
 import { SEO } from '../components'
@@ -22,6 +23,7 @@ import { SEO } from '../components'
 export default function Home() {
   const background = '/static/unsplash/byron-johnson(1).png'
   const contentBackground = '/static/animals/moose-brown.png'
+  const bottomImage = '/static/patrick-hendry-trees.png'
 
   return (
     <PageWrapper>
@@ -113,6 +115,19 @@ export default function Home() {
           </ContentSection>
         </HomeContent>
       </HomeContentWrapper>
+
+      <BottomImageWrapper>
+        <Image 
+          src={bottomImage}
+          alt='black and white trees'
+          style={{ 
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
+          fill
+          priority
+        />
+      </BottomImageWrapper>
     </PageWrapper>
   )
 }
