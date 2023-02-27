@@ -61,20 +61,18 @@ const DropdownMenu = () => {
     return (
       <Dropdown>
         <Dropdown.Button light>
-          <Avatar src={session.user.image} size='md' />
+          {/* <Avatar src={session.user.image} size='md' /> */}
+          Hi, {session.user.name}
         </Dropdown.Button>
-        <Dropdown.Menu
-          // color={selectedColor}
-          variant="light"
-        >
-          <Dropdown.Item key='account'>Account</Dropdown.Item>
+        <Dropdown.Menu variant="light">
+          <Dropdown.Item key='account'>My Account</Dropdown.Item>
           <Dropdown.Item key='myMaps'>My Maps</Dropdown.Item>
           <Dropdown.Item 
             key="signOut"
             color="error" 
             withDivider
           >
-            <NextUILink style={{ color: '#f54c4c' }} onClick={() => signIn()}>
+            <NextUILink style={{ color: '#f54c4c' }} onClick={() => signOut()}>
               Sign Out
             </NextUILink>
           </Dropdown.Item>
