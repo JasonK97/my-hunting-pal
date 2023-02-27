@@ -1,4 +1,4 @@
-import { Header } from '../components'
+import { Header, StickyHeader, FooterContainer } from '../components'
 import { useRouter } from 'next/router'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
     type: 'dark',
     theme: {
       colors: {
-        background: '#262626'
+        background: '#262626',
       },
     }
   })
@@ -35,8 +35,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
         }}
       >
         <NextUIProvider>
-            <Header path={path} />
+            {/* <Header path={path} /> */}
+            <StickyHeader />
             <Component {...pageProps} />
+            <FooterContainer />
         </NextUIProvider>
       </NextThemesProvider>
     </SessionProvider>

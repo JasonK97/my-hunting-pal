@@ -12,7 +12,7 @@ export const Header = () => {
 	return (
     <Navbar variant='sticky' maxWidth='fluid'>
       <Navbar.Toggle showIn='xs' />
-      <Navbar.Brand showIn='xs'>
+      <Navbar.Brand>
         <Link href='/' style={{ color: '#8f754f', padding: '15px' }}>
           <Image 
             src='/static/MHP_logo.png'
@@ -23,7 +23,7 @@ export const Header = () => {
           />
         </Link>
       </Navbar.Brand>
-      <Navbar.Brand hideIn='xs'>
+      {/* <Navbar.Brand hideIn='xs'>
         <Link href='/' style={{ color: '#8f754f', padding: '15px' }}>
           <Image 
             src='/static/MHP_logo.png'
@@ -36,7 +36,7 @@ export const Header = () => {
         <Text b color="#64b6ac">
           My Hunting Pal
         </Text>
-      </Navbar.Brand>
+      </Navbar.Brand> */}
       <Navbar.Content hideIn='xs'>
         {collapseItems.map(item => (
             <Link key={item.title} href={item.link} style={{ color: '#d7b377' }}>{item.title}</Link>

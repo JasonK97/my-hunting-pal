@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { TfiMapAlt } from 'react-icons/tfi'
-import { BiNavigation } from 'react-icons/bi'
+import { BiNavigation, BiShareAlt } from 'react-icons/bi'
 import { 
+  PageWrapper,
   BannerButton,
   HeroContent,
   HeroWrapper,
@@ -12,20 +13,18 @@ import {
   HomeImageWrapper,
   HomeContent,
   ContentSection,
+  ContentText,
   ContentSubText,
 } from '../styles/styles'
 
 import { SEO } from '../components'
-import useWindowDimensions from '../utils/useWindowDimensions'
 
 export default function Home() {
-  const { width } = useWindowDimensions()
-  const background = '/static/unsplash/byron-johnson-lQ0gPL_0Bt8-unsplash.jpg'
-  const mobileBackground = '/static/unsplash/elk-herd-mobile.png'
+  const background = '/static/unsplash/byron-johnson(1).png'
   const contentBackground = '/static/animals/moose-brown.png'
 
   return (
-    <>
+    <PageWrapper>
       <SEO
         page='Home'
         description='My Hunting Pal, your new companion for hunting trips.'
@@ -33,23 +32,13 @@ export default function Home() {
 
       <HeroWrapper>
         <ImageWrapper>
-          {width < 800 ? (
-            <Image 
-              src={mobileBackground}
-              alt='A herd of Elk.'
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-              fill
-              priority
-            />
-          ) : (
-            <Image 
-              src={background}
-              alt='A herd of Elk.'
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-              fill
-              priority
-            />
-          )}
+          <Image 
+            src={background}
+            alt='A herd of Elk.'
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            fill
+            priority
+          />
         </ImageWrapper>
 
         <HeroContent>
@@ -74,14 +63,14 @@ export default function Home() {
 
         <HomeContent>
           <ContentSection>
-            <HeroText>
+            <ContentText>
               <TfiMapAlt 
                 style={{ 
                   marginRight: '15px',
                 }}
               />
-              Section off your favorite areas.
-            </HeroText>
+              Section Off Your Favorite Areas.
+            </ContentText>
             <ContentSubText>
               Our maps allow you to easily demarcate 
               the land you hunt and conveniently 
@@ -91,14 +80,14 @@ export default function Home() {
           
 
           <ContentSection>
-            <HeroText>
+            <ContentText>
               <BiNavigation 
                 style={{ 
                   marginRight: '15px',
                 }}
               />
               Easy Navigation.
-            </HeroText>
+            </ContentText>
             <ContentSubText>
               With the assistance of our mapping technology, 
               you can conveniently navigate to your specific 
@@ -106,8 +95,24 @@ export default function Home() {
               you find yourself.
             </ContentSubText>
           </ContentSection>
+
+          <ContentSection>
+            <ContentText>
+              <BiShareAlt 
+                style={{ 
+                  marginRight: '15px',
+                }}
+              />
+              Share Your Best Spots with Friends.
+            </ContentText>
+            <ContentSubText>
+              Once you've identified your ideal spot, our 
+              platform allows you to effortlessly share the 
+              marked land and stands with your friends!
+            </ContentSubText>
+          </ContentSection>
         </HomeContent>
       </HomeContentWrapper>
-    </>
+    </PageWrapper>
   )
 }
