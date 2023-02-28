@@ -3,7 +3,7 @@ import { Text } from '@nextui-org/react'
 import Link from 'next/link'
 
 export const PageWrapper = styled.div`
-  min-height: 100vh;
+  min-height: 90vh;
 `
 
 export const HeroWrapper = styled.div`
@@ -116,6 +116,12 @@ export const HomeImageWrapper = styled.div`
       right: -225px;
     }
   }
+`
+
+export const MapContainer = styled.div`
+  margin-top: 4rem;
+  align-items: center;
+  height: 90vh;
 `
 
 export const Sticky = styled.header`
