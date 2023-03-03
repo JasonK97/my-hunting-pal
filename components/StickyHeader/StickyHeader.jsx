@@ -13,6 +13,7 @@ import {
   Sticky,
   HeaderSection,
   HeaderLink,
+  HeaderImage,
 } from '@/styles/styles'
 
 export const StickyHeader = () => {
@@ -20,7 +21,7 @@ export const StickyHeader = () => {
     <Sticky>
       <HeaderSection>
         <Link href='/'>
-          <Image
+          <HeaderImage
             src={logo}
             alt={logoAlt}
             height={100}

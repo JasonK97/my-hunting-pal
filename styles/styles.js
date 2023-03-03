@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Text } from '@nextui-org/react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const PageWrapper = styled.div`
   min-height: 90vh;
@@ -152,6 +153,15 @@ export const HeaderLink = styled(Link)`
 
   &:hover {
     color: #8f754f;
+    transition: .25s;
+  }
+`
+
+export const HeaderImage = styled(Image)`
+transition: .25s;
+
+  &:hover {
+    filter: brightness(75%);
     transition: .25s;
   }
 `
