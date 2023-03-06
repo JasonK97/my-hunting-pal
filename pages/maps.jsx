@@ -8,6 +8,11 @@ import { PageWrapper, MapContainer } from '@/styles/styles'
 export default function Maps() {
   const [pageIsMounted, setPageIsMounted] = useState(false)
   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
+  // Set bounds to just the US.
+  // const bounds = [
+  //   [24.521208, -124.736342], // Southwest coordinates
+  //   [49.382808, -66.945392] // Northeast coordinates
+  // ]
 
   useEffect(() => {
     setPageIsMounted(true)
@@ -17,6 +22,7 @@ export default function Maps() {
       style: 'mapbox://styles/mapbox/satellite-streets-v12',
       center: [-96, 39],
       zoom: 4,
+      // maxBounds: bounds,
     });
 
     map
