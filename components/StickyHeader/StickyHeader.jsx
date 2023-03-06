@@ -38,8 +38,8 @@ export const StickyHeader = () => {
         <HeaderLink href='/about'>
           About
         </HeaderLink>
-        <HeaderLink href='/maps'>
-          Maps
+        <HeaderLink href='/map'>
+          Map
         </HeaderLink>
       </HeaderSection>
 

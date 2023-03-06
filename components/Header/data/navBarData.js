@@ -8,8 +8,8 @@ export const collapseItems = [
     link: '/about',
   },
   {
-    title: 'Maps',
-    link: '/maps',
+    title: 'Map',
+    link: '/map',
   },
 ]
 

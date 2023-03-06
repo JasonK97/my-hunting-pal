@@ -5,7 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { SEO } from '@/components'
 import { PageWrapper, MapContainer } from '@/styles/styles'
 
-export default function Maps() {
+export default function Map() {
   const [pageIsMounted, setPageIsMounted] = useState(false)
   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
   // Set bounds to just the US.
@@ -70,7 +70,7 @@ export default function Maps() {
   return (
     <PageWrapper>
       <SEO 
-        page='Maps'
+        page='Map'
         description='Take a look, map out, and plan your next hunting trip.'
       />
 
