@@ -108,7 +108,7 @@ export default function Home() {
               Share Your Best Spots with Friends.
             </ContentText>
             <ContentSubText>
-              Once you've identified your ideal spot, our 
+              Once you&apos;ve identified your ideal spot, our 
               platform allows you to effortlessly share the 
               marked land and stands with your friends!
             </ContentSubText>
