@@ -13,6 +13,7 @@
     "@next/font": "13.1.6",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@types/mapbox-gl": "^2.7.10",
+    "@vercel/analytics": "^0.1.11",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "mapbox-gl": "^2.13.0",
