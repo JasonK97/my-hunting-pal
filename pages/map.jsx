@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
+import MapboxDraw from '@mapbox/mapbox-gl-draw'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css'
 
 import { SEO } from '@/components'
 import { PageWrapper, MapContainer } from '@/styles/styles'
@@ -23,7 +25,16 @@ export default function Map() {
       center: [-96, 39],
       zoom: 4,
       // maxBounds: bounds,
-    });
+    })
+
+    const draw = new MapboxDraw({
+      displayControlsDefault: false,
+      // Select which mapbox-gl-draw control buttons to add to the map.
+      controls: {
+        polygon: true,
+        trash: true
+      },
+    })
 
     map
       .addControl(
@@ -37,6 +48,7 @@ export default function Map() {
       .addControl(
         new mapboxgl.NavigationControl()
       )
+      .addControl(draw)
       .on('style.load', () => {
         map.addSource('mapbox-dem', {
           'type': 'raster-dem',
