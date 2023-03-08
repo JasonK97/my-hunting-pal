@@ -48,7 +48,7 @@ export default function Home() {
             Welcome to My Hunting Pal.
           </HeroText>
           <SubText>Your best friend for your next trip.</SubText>
-          <BannerButton href='/maps'>Start Exploring</BannerButton>
+          <BannerButton href='/map'>Start Exploring</BannerButton>
         </HeroContent>
       </HeroWrapper>
 
