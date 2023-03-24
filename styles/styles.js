@@ -145,7 +145,7 @@ export const HeaderSection = styled.div`
 `
 
 export const HeaderLink = styled(Link)`
-  font-decoration: none;
+  text-decoration: none;
   color: #d7b377;
   margin-left: 15px;
   margin-right: 15px;
