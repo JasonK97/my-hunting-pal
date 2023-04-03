@@ -67,8 +67,16 @@ const DropdownMenu = () => {
           Hi, {session.user.name}
         </Dropdown.Button>
         <Dropdown.Menu variant="light">
-          <Dropdown.Item key='account'>My Account</Dropdown.Item>
-          <Dropdown.Item key='myMaps'>My Maps</Dropdown.Item>
+          <Dropdown.Item key='account'>
+            <NextUILink style={{ color: '#ffffff' }} href='/my-account'>
+              My Account
+            </NextUILink>
+          </Dropdown.Item>
+          <Dropdown.Item key='myMaps'>
+            <NextUILink style={{ color: '#ffffff' }} href='/my-maps'>
+              My Maps
+            </NextUILink>
+          </Dropdown.Item>
           <Dropdown.Item 
             key="signOut"
             color="error" 
