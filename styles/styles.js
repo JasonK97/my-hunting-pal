@@ -191,4 +191,10 @@ export const FooterTextContainer = styled.div`
 export const FooterLinkContainer = styled.div`
   display: inline;
   float: right;
+  transition: .25s;
+  
+  &:hover {
+    transition: .25s;
+    color: #8c8c8c;
+  }
 `
