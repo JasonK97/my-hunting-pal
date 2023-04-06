@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
+import { FaTwitter, FaGithub } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
 import {
@@ -8,7 +8,7 @@ import {
   FooterLinkContainer,
   FooterTextContainer,
 } from '../../styles/styles'
-import { gitHubLink, emailLink } from './data'
+import { gitHubLink, emailLink, twitterLink } from './data'
 
 export const FooterContainer = () => {
     const currentYear =  new Date().getFullYear()
@@ -22,9 +22,13 @@ export const FooterContainer = () => {
       </FooterTextContainer>
 
       <FooterLinkContainer>
-        <Link href={gitHubLink} target='_blank'>
-          <FaGithub size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
+        <Link href={twitterLink} target='_blank'>
+          <FaTwitter size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
         </Link>
+
+	{/* <Link href={gitHubLink} target='_blank'>
+          <FaGithub size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
+        </Link> */}
 
         <Link href={emailLink} target='_blank'>
           <MdEmail size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
