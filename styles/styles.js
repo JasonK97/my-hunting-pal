@@ -194,7 +194,7 @@ export const FooterLinkContainer = styled.div`
   transition: .25s;
   
   a:hover {
+    filter: brightness(75%);
     transition: .25s;
-    color: #8c8c8c;
   }
 `
