@@ -193,7 +193,7 @@ export const FooterLinkContainer = styled.div`
   float: right;
   transition: .25s;
   
-  &:hover {
+  a:hover {
     transition: .25s;
     color: #8c8c8c;
   }
