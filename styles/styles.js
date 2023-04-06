@@ -179,8 +179,8 @@ export const Footer = styled.footer`
   padding: 2rem;
   border-top: 1px solid #eaeaea;
   align-items: center;
-  background-color: #171717;
 `
+// background-color: #171717;
 
 export const FooterTextContainer = styled.div`
   display: inline;
