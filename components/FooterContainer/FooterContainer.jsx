@@ -22,16 +22,16 @@ export const FooterContainer = () => {
       </FooterTextContainer>
 
       <FooterLinkContainer>
-        <Link href={twitterLink} target='_blank'>
-          <FaTwitter size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
+        <Link href={twitterLink} target='_blank' style={{ color: 'white' }}>
+          <FaTwitter size='1.5rem' style={{ marginRight: '15px' }}/>
         </Link>
 
-	<Link href={gitHubLink} target='_blank'>
-          <FaGithub size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
+	<Link href={gitHubLink} target='_blank' style={{ color: 'white' }}>
+          <FaGithub size='1.5rem' style={{ marginRight: '15px' }}/>
         </Link>
 
-        <Link href={emailLink} target='_blank'>
-          <MdEmail size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
+        <Link href={emailLink} target='_blank' style={{ color: 'white' }}>
+          <MdEmail size='1.5rem' style={{ marginRight: '15px' }}/>
         </Link>
       </FooterLinkContainer>
 		</Footer>
