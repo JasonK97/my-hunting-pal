@@ -26,9 +26,9 @@ export const FooterContainer = () => {
           <FaTwitter size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
         </Link>
 
-	{/* <Link href={gitHubLink} target='_blank'>
+	<Link href={gitHubLink} target='_blank'>
           <FaGithub size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
-        </Link> */}
+        </Link>
 
         <Link href={emailLink} target='_blank'>
           <MdEmail size='1.5rem' style={{ color: 'white', marginRight: '15px' }}/>
