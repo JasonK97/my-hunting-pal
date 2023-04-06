@@ -185,7 +185,7 @@ export const Footer = styled.footer`
 export const FooterTextContainer = styled.div`
   display: inline;
   float: left;
-  width: 93%;
+  width: 90%;
 `
 
 export const FooterLinkContainer = styled.div`
