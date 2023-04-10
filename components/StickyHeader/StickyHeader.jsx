@@ -11,14 +11,21 @@ import {
 import { logo, logoAlt } from './data'
 import { 
   Sticky,
+  HeaderDropdown,
   HeaderSection,
+  HeaderLinkSection,
   HeaderLink,
   HeaderImage,
+  Hamburger,
 } from '@/styles/styles'
 
 export const StickyHeader = () => {
   return (
     <Sticky>
+      <HeaderDropdown>
+        <Hamburger />
+      </HeaderDropdown>
+
       <HeaderSection>
         <Link href='/'>
           <HeaderImage
@@ -31,7 +38,7 @@ export const StickyHeader = () => {
         </Link>
       </HeaderSection>
       
-      <HeaderSection>
+      <HeaderLinkSection>
         <HeaderLink href='/'>
           Home
         </HeaderLink>
@@ -41,16 +48,16 @@ export const StickyHeader = () => {
         <HeaderLink href='/map'>
           Map
         </HeaderLink>
-      </HeaderSection>
+      </HeaderLinkSection>
 
-      <HeaderSection>
-        <DropdownMenu />
-      </HeaderSection>
+      <HeaderLinkSection>
+        <AccountDropdownMenu />
+      </HeaderLinkSection>
     </Sticky>
   )
 }
 
-const DropdownMenu = () => {
+const AccountDropdownMenu = () => {
   const { data: session } = useSession()
 
   if (!session) {

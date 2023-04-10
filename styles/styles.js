@@ -138,10 +138,32 @@ export const Sticky = styled.header`
   top: 0;
   width: 100%;
   z-index: 2;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
+`
+
+export const HeaderDropdown = styled.div`
+  @media (min-width: 800px) {
+    display: none;
+  }
+`
+
+export const Hamburger = styled.div`
+	
 `
 
 export const HeaderSection = styled.div`
   align-self: center;
+`
+
+export const HeaderLinkSection = styled.div`
+  align-self: center;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 export const HeaderLink = styled(Link)`
