@@ -201,16 +201,22 @@ export const Footer = styled.footer`
   padding: 2rem;
   border-top: 1px solid #eaeaea;
   align-items: center;
-  background-color: #171717;
 `
+// background-color: #171717;
 
 export const FooterTextContainer = styled.div`
   display: inline;
   float: left;
-  width: 93%;
+  width: 90%;
 `
 
 export const FooterLinkContainer = styled.div`
   display: inline;
   float: right;
+  transition: .25s;
+  
+  a:hover {
+    filter: brightness(75%);
+    transition: .25s;
+  }
 `
